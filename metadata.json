@@ -1,0 +1,5 @@
+{
+  "name": "BPC Triathlon Slide Generator",
+  "description": "A high-fidelity slide generator for sports performance brands using the BPC Design System. Converts text input into downloadable 1080x1350 PNG slides.",
+  "requestFramePermissions": []
+}

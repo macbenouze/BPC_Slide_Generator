@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BPC Slide Generator</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <!-- html2canvas CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config for BPC Design System -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bpc: {
+                black: '#0B0D10',
+                charcoal: '#141821',
+                white: '#F5F7FA',
+                grey: '#E2E8F0', // Updated to pearl grey for max contrast/accessibility
+                red: '#E53935',
+                'red-dark': '#B71C1C',
+              }
+            },
+            fontFamily: {
+              montserrat: ['Montserrat', 'sans-serif'],
+              inter: ['Inter', 'sans-serif'],
+            },
+            backgroundImage: {
+              'bpc-gradient': 'linear-gradient(to bottom, #0B0D10, #141821)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Engineering Grid Pattern for Data Look */
+      .bg-bpc-grid {
+        background-color: #0B0D10;
+        background-image: 
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      
+      /* Hide scrollbar for clean UI */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "html2canvas": "https://aistudiocdn.com/html2canvas@^1.4.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-zinc-900 text-white">
+    <div id="root"></div>
+  </body>
+</html>
